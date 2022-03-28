@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+}
+  
+h1 {
+  font-size: 32px;
+  margin: 0 0 20px;
+  line-height: 1.2em;
+}
+  
+p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.8em;
+}
+
+#fullPageScroll {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: start;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.pagination {
+  position: fixed;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.pagination img {
+  width: 12px;
+  height: 12px;
+}
+
+.pagination a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 24px 0;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  transition: transform 0.2s;
+}
+
+.pagination a.active {
+  transform: scale(1.8);
+}
+
+/* ====================================== profile ============================================= */
+#profile {
+    position: relative;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),url("../images/profile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+#profile-column {
+    position: absolute;
+    left: 500px;
+    top: 200px;
+    display: flex;    
+}
+
+#profile-pic{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+/* ====================================== coffee ============================================= */
+#coffee {
+    position: relative;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .35),  rgba(0, 0, 0, .35)),  url("../images/coffee.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+#coffee-column {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    width: 680px;
+    margin: 0 auto;
+}
+
+#coffee-column h1 {
+  margin-bottom: 20px;
+}
+
+#coffee-column p {
+  margin: 0 50px 50px;
+}
+  
+#coffee-column img {
+  width: 600px;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+}
+  
+.slider {
+  position: relative;
+  width: 600px;
+  margin: 1rem auto;
+  border: 5px solid black;
+  border-radius: 6px;
+}
+
+.slider .slide {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider .slide img {
+  width: 600px;
+  height: 400px;
+}
+
+.slider .slide ul {
+  width: 1800px;
+  height: 400px;
+  list-style: none;
+  font-size: 0;
+  position: relative;
+}
+
+.slider .slide li {
+  display: inline-block;
+  position: absolute;
+  transition: .7s cubic-bezier(.45, .06, .32, 1);
+}
+
+.slide li:nth-of-type(1) {
+  left: -600px;
+}
+
+.slide li:nth-of-type(2) {
+  left: 0;
+}
+
+.slide li:nth-of-type(3) {
+  left: 600px;
+}
+
+.controller {
+  display: flex;
+  width: 100%;
+  height: 65px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: repeating-linear-gradient(
+      -45deg, 
+      transparent, 
+      transparent 10px, 
+      rgba(219, 219, 219, 1) 10px,
+      rgba(219, 219, 219, 1) 19px
+      );
+}
+
+.controller .prev-btn {
+  margin-left: 3rem;
+  cursor: pointer;
+  color: #181818;
+}
+
+.controller .next-btn {
+  margin-right: 3rem;
+  cursor: pointer;
+  color: #181818;
+}
+
+.controller .indicator {
+  display: flex;
+  width: 80px;
+  height: 16px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+  border-radius: 10px;
+}
+
+.indicator span {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+#active {
+  background: red;
+}
+
+/* ====================================== code ============================================= */
+#code {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, .3),  rgba(0, 0, 0, .3)),  url("../images/code.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+#skill_column {
+position: absolute;
+width: 700px;
+left: 0;
+right: 0;
+top: 20%;
+margin: 0 auto;
+}
+
+#skill_column ul {
+padding: 0;
+margin: 70px auto;
+}
+
+#skill_column li {
+display: inline-block;
+margin-right: 50px;
+
+}
+
+#skill_column img {
+height: 80px;
+}
+
+#code_column {
+position: absolute;
+width: 700px;
+left: 0;
+right: 0;
+top: 43%;
+margin: 0 auto;
+}
+
+/* ====================================== article ============================================= */
+#article {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, .3),  rgba(0, 0, 0, .3)),  url("../images/article.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+#article_column {
+position: absolute;
+width: 740px;
+height: 300px;
+left: 35%;
+top: 0;
+bottom: 0;
+margin: auto;
+}
+
+/* ====================================== code ============================================= */
+#works {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, .5),  rgba(0, 0, 0, .5)),  url("../images/work.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+#works_column {
+position: absolute;
+width: 740px;
+height: 475px;
+left: 0;
+right: 0;
+top: 15%;
+margin: auto;
+}
+
+#works_column p{
+margin-bottom: 15px;
+}
+
+#works-column img {
+width: 600px;
+height: 400px;
+display: block;
+margin: 0 auto;
+}
+
+/* #works .slider .slide ul {
+width: 2400px;
+height: 400px;
+list-style: none;
+font-size: 0;
+position: relative;
+}
+
+#works .slide li:nth-of-type(4) {
+left: 1200px;
+} */
+
+/* ====================================== footer ============================================= */
+#footer {
+    position: absolute;
+    text-align: center;
+    height: 70px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #c4c4c4;
+}
+
+#footer ul{
+    padding: 0;
+    margin: 10px auto;
+
+}
+
+#footer li{
+    display: inline;
+    margin-right: 50px;
+}
+
+#footer li:last-child {
+    margin-right: 0;
+}
+
+#footer img{
+    width:50px;
+    height: 50px;
+}
